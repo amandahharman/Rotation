@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageRotation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drawnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-tz-7it">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8c1-nN-e0e"/>
+                                    <constraint firstAttribute="width" constant="150" id="h7S-fq-j3d"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-7X-XEF">
+                                <rect key="frame" x="19.5" y="76" width="337.5" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lu-aE-w1G">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joY-qS-hsS">
+                                        <rect key="frame" x="116" y="0.0" width="105.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVb-9V-5Z7">
+                                        <rect key="frame" x="231.5" y="0.0" width="106" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sST-uy-Pbj">
+                                <rect key="frame" x="19.5" y="36" width="104.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99981075525283813" green="0.065725766122341156" blue="0.68411731719970703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy2-E5-JvH">
+                                <rect key="frame" x="327" y="122" width="30" height="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.99981075525283813" green="0.065725766122341156" blue="0.68411731719970703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjO-At-l3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sST-uy-Pbj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="DRF-OI-4WC"/>
+                            <constraint firstItem="dGj-7X-XEF" firstAttribute="top" secondItem="sST-uy-Pbj" secondAttribute="bottom" constant="20" id="NMs-M0-Bwh"/>
+                            <constraint firstItem="dGj-7X-XEF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="RNV-2U-hqj"/>
+                            <constraint firstItem="Qy2-E5-JvH" firstAttribute="top" secondItem="dGj-7X-XEF" secondAttribute="bottom" constant="16" id="VzO-vU-3jb"/>
+                            <constraint firstItem="dGj-7X-XEF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azG-8U-OtM"/>
+                            <constraint firstItem="ru6-tz-7it" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhm-gu-ItT"/>
+                            <constraint firstItem="sST-uy-Pbj" firstAttribute="leading" secondItem="dGj-7X-XEF" secondAttribute="leading" id="i6e-hZ-C6l"/>
+                            <constraint firstItem="Qy2-E5-JvH" firstAttribute="trailing" secondItem="sVb-9V-5Z7" secondAttribute="trailing" id="kif-Jl-jEa"/>
+                            <constraint firstItem="ru6-tz-7it" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qzC-FH-WCk"/>
+                            <constraint firstItem="ru6-tz-7it" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r2x-ZJ-sRz"/>
+                            <constraint firstItem="ru6-tz-7it" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sdf-oM-Ky3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goButton" destination="Qy2-E5-JvH" id="lML-al-HVh"/>
+                        <outlet property="imageView2D" destination="ru6-tz-7it" id="dRy-8L-zdv"/>
+                        <outlet property="xTextField" destination="3lu-aE-w1G" id="DJS-th-AxF"/>
+                        <outlet property="yTextField" destination="joY-qS-hsS" id="WS2-Fa-xob"/>
+                        <outlet property="zTextField" destination="sVb-9V-5Z7" id="MjL-E5-vni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="drawnArrow" width="720" height="720"/>
+    </resources>
+</document>
